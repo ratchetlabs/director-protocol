@@ -1,0 +1,13 @@
+{
+  "_what": "Shared fresh-data-block ledger (rule A4). ONE writer seat (the gatekeeper) appends claim rows via a small append-only claim script you write (it recomputes the frontier and refuses overlaps; hand-edits are the defect gate_check.py's form check exists to catch); every consumer cites its block here. frontier_of_record = the next never-observed value; it only advances. Starter file — replace the example rows with your own.",
+  "frontier_of_record": 1010,
+  "claims": [
+    {"range": [1000, 1004], "owner": "example-seat", "arc": "EXAMPLE-ARC-1",
+     "status": "SPENT", "claimed_at": "1970-01-01",
+     "note": "example row — delete when you record your first real claim"},
+    {"range": [1005, 1009], "owner": "example-seat", "arc": "EXAMPLE-ARC-2",
+     "status": "OPEN", "claimed_at": "1970-01-01",
+     "note": "example row — delete when you record your first real claim"}
+  ],
+  "void_blocks_never_reusable": []
+}

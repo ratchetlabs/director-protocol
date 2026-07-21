@@ -1,0 +1,10 @@
+{
+  "_what": "Gate manifest for tools/gate_check.py — the gatekeeper fills this FROM THE PACKET under review (chain-log-named canonical paths at committed HEAD), never from the submitting seat's summary. See CHECKLISTS.md §11.",
+  "packet": "<stamp doc + section, e.g. BUILD-lineX.md §41 close packet>",
+  "files": [
+    {"path": "<repo-relative canonical path>", "md5": "<hash claimed in the packet>"}
+  ],
+  "data_ranges": [[1000, 1004]],
+  "scope_pathspecs": ["<the signed arc's literal pathspecs>"],
+  "touched_paths": ["<every path the arc's commits touched this cycle>"]
+}
