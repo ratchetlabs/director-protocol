@@ -2,6 +2,23 @@
 
 All notable changes to this protocol are documented here.
 
+## 0.3.0 — the front end + the four-functions framing
+
+- **README "What it actually does"**: the mechanism layer named — memory outside the
+  model, claims with pointers, arc-level continuity of intent, shared-and-verifiable
+  multi-agent context; scrutiny-survival reframed as the corollary.
+- **NEW `DESIGN.md`** — the adversarial discovery/design front end the registered cycle
+  depends on: unconstrained-best-first, named-voices red-team passes, question-first
+  arcs, layer-mapped design docs, design freeze + one arbiter round, the 5-line kickoff
+  block. Extracted from the source project's charter + process rules; the registered
+  cycle certifies answers — this is what makes the questions worth answering.
+- **NEW `RESEARCH.md`** — the exploratory-search protocol (the source project's §H):
+  answer-not-novelty prime directive, tiered coarse budgets w/ split search pool,
+  fetch/harvest/direct model routing, the generate-walk-checkpoint-prune-recombine
+  round loop, protected explore tranche, analogy sweeps, one adversarial look at the
+  synthesis, the one-knob retro, cross-run stepping-stones retention.
+- Repo map + quick start wired to both.
+
 ## 0.2.1 — joint founder review + initial public release
 
 - Honesty pass on narrative claims, every number now derivable: duration corrected

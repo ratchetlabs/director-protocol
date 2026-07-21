@@ -25,6 +25,55 @@ everything here:
 > of that transition, a cheap-model seat caught and corrected a strong-model seat's
 > committed error ([case study 05](case-studies/05-tier-transition.md)).
 
+## What it actually does
+
+"Survives adversarial scrutiny" is the outcome. The mechanism is four functions,
+all answers to the same three facts about LLM sessions: they are amnesiac, they
+are credulous, and several of them running in parallel have no natural way to
+share a world.
+
+**It keeps memory intact — by never letting memory live in the model.** Sessions
+die at usage limits mid-thought; summaries of summaries drift. The protocol treats
+session death as the normal case and relocates all load-bearing state into
+committed bytes: append-only chain logs per line, hash-pinned registrations, a
+handoff layer. What makes that *memory* rather than just files is the re-entry
+discipline — a successor session doesn't resume, it **reconstructs**: read the
+literal tail of the log, treat the dead predecessor's uncommitted work as an
+unverified draft to adopt or discard deliberately, verify claimed facts against
+artifacts before continuing them. The conversation is scratch; the repo is the
+mind.
+
+**It keeps claims grounded — by refusing to let a statement exist without a
+pointer.** Every factual claim has exactly three legal states: verified own-hands
+against a named artifact, attributed to a named source, or explicitly labeled
+unverified — no fourth state, and a "verification" that cites no byte (path,
+hash, line, rerun output) doesn't count. Around that: a controlled verdict
+vocabulary (untestable ≠ null ≠ refuted) and freezes, because claims can only be
+grounded against things that hold still.
+
+**It keeps the research arc grounded across sessions — continuity of INTENT, not
+just of facts.** A session can inherit every fact its predecessor knew and still
+lose the plot. So the arc is pinned at both ends: pre-registration up front
+(question, criterion, decision bar committed before the run — no later session,
+including your own future self after seeing results, can quietly move the
+goalposts), and a lessons ratchet at the back (every correction becomes a written
+rule or a fixture, so the arc stops re-fighting settled battles).
+
+**It keeps multiple agents in shared context — where shared means independently
+verifiable, not shared belief.** Coordination happens through the repository,
+never through conversation: cross-seat facts travel as committed notes naming the
+commit hash of the fact they report; a note from another agent is a *claim* the
+receiver verifies at bytes before acting. Because parallel seats are usually the
+same model family, agreement is not confirmation — independence is bought
+structurally: a different-model arbiter, a non-party gatekeeper, an auditor
+outside every line.
+
+All four are one move applied four times: **externalize everything load-bearing
+into committed, hash-citable artifacts, and make every re-entry — a new session,
+another agent, your own later self — a verification event rather than a trust
+event.** Scrutiny-survival then comes almost for free: claims built this way were
+constructed the way a skeptic would audit them.
+
 ## The lean cycle in 60 seconds
 
 One verdict-bearing experiment cycle ([PROTOCOL.md](PROTOCOL.md) §G):
@@ -68,7 +117,10 @@ strength. Grow into it stepwise — [ADAPTING.md](ADAPTING.md) gives the observe
 1. Copy `claude/CLAUDE-md-block.md` into your project's `CLAUDE.md` (or equivalent
    charter), and the `claude/commands/` files into your commands directory: `save.md`
    (checkpoint) and `director.md` (session-resume initialization + act as director).
-2. Read [PROTOCOL.md](PROTOCOL.md) once, end to end. Read [DIRECTOR.md](DIRECTOR.md) if
+2. Read [PROTOCOL.md](PROTOCOL.md) once, end to end. Starting from a blank problem
+   rather than a ready-to-register experiment? [RESEARCH.md](RESEARCH.md) and
+   [DESIGN.md](DESIGN.md) are the front end — explore, then design adversarially,
+   then register. Read [DIRECTOR.md](DIRECTOR.md) if
    you are configuring the director role.
 3. Start your first experiment line by instantiating `templates/REGISTRATION.md` and
    `templates/BUILD-LOG.md`. Copy `templates/lessons.md` (empty — the ratchet is the
@@ -85,6 +137,8 @@ strength. Grow into it stepwise — [ADAPTING.md](ADAPTING.md) gives the observe
 |---|---|
 | `GETTING-STARTED.md` | The ~10-minute working setup: vendor, wire commands, smoke-test the gate tool, first cycle |
 | `PROTOCOL.md` | The rules (A–F), the lean cycle (§G), and the scaling-period amendments (§G+) — triggers → required actions → artifacts |
+| `DESIGN.md` | The adversarial front end: unconstrained-best-first, named-voices red-team, question-first arcs, design freezes, the kickoff block |
+| `RESEARCH.md` | The exploratory-search protocol: answer-not-novelty, tiered budgets, the round loop, explore tranche, stepping stones |
 | `ORCHESTRATION.md` | Multi-seat structure: seats, fences, state, inbox protocol, arcs + the mechanical gate, the model-tier economy |
 | `DIRECTOR.md` | The director role: red-teaming, pushing back, own-error posture, model economy |
 | `CHECKLISTS.md` | Twelve mechanical checklists with "do not proceed until" gates — the director's judgment moves made explicit |
