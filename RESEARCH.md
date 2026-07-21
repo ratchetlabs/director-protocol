@@ -1,10 +1,20 @@
-# RESEARCH — the Exploratory-Search Protocol
+# RESEARCH — Goal-Oriented Exploratory Search
 
 The upstream counterpart of the registered cycle: a discipline for **exploratory
 research runs** — literature sweeps, design-space reconnaissance, deep dives into an
 unfamiliar field — that produces maps and answers a later session can trust, without
 the verdict machinery (which would suffocate exploration) and without the opposite
 failure (an unbounded wander that burns a week and leaves no reusable record).
+
+The name to hold onto is **goal-oriented exploratory search**. Both halves are
+load-bearing and they are in tension by design: *exploratory* means the run spawns
+deliberately diverse hypothesis tracks, sweeps distant disciplines for analogous
+mechanisms, and protects a tranche of justification-free wandering; *goal-oriented*
+means every one of those motions is aimed — a named goal pinned at kickoff, searches
+re-aimed each round by what the previous round taught, and the run judged by whether
+the question got answered or precisely relocated, never by how interesting the
+wander was. The protocol below is the machinery that keeps both halves honest at
+once.
 
 In the source project this protocol fed the design phase ([DESIGN.md](DESIGN.md))
 and powered standalone deep-dive sessions; several of its runs ended by *finding*
@@ -44,8 +54,12 @@ your layout) whose §0 pins:
   search allowance up front batch-satisfies any per-search approval convention.
 - **Stop/kill conditions** — answered / question dissolved / budget exhausted
   (forces the synthesis step) / a named external event.
-- **Seed analogy fields** — ≥3 named OTHER fields to sweep for analogous
-  mechanisms (named now so the close-out can check they were actually swept).
+- **Seed analogy fields** — around FOUR named disciplines, **related but
+  different**: adjacent enough that their mechanisms could transfer, different
+  enough that they hold mechanisms your home field doesn't. Named NOW, at kickoff,
+  so the close-out can check they were actually swept — and each carries a standing
+  obligation (§5): the run must explicitly think through the analogy from that
+  field to the current problem, not just read in it.
 
 ## 2. Budgets — coarse units, one extension, a split search pool
 
@@ -88,7 +102,7 @@ report findings plus surprises), **direct + synthesize** (strongest available �
 steer, spawn/prune tracks, write checkpoints, decide when a finding changes the
 strategy). The director never executes delegable fetches; agents never make prune
 decisions. A fourth role, the **adversarial look**, is a different-model arbiter
-and touches only the synthesis (§5).
+and touches only the synthesis (§6).
 
 Machine-load discipline, learned the hard way (a fan-out crashed the host
 mid-run): cap concurrent agents (the source project ran ≤2, dispatched in
@@ -106,7 +120,12 @@ Each round (count set by tier):
    Unrelated-looking tracks are welcome; relatedness is not a spawn criterion.
 2. **WALK.** Route fetches and harvests across tracks per budget. The director
    re-reads the accumulating log BEFORE routing each batch — the walk is informed
-   by the search so far, not by the plan from an hour ago.
+   by the search so far, not by the plan from an hour ago. **This is where the
+   goal-orientation bites: the next round's searches are RE-AIMED by what this
+   round taught.** A finding that reframes the problem redirects queries, kills
+   tracks, and spawns new ones at the next GENERATE — the plan pivots on learning,
+   it is never executed as written. (A run whose round-3 queries could have been
+   written at kickoff wasn't listening.)
 3. **SYNTHESIS CHECKPOINT.** The director writes 5–15 lines: how the findings
    fit, what surprised, the current best map — surfaced to the human each round
    (the human steers between rounds, never mid-walk). The checkpoint MUST ask:
@@ -124,16 +143,34 @@ Each round (count set by tier):
    mechanism under track B's constraint") — and sweep the stepping-stones file
    (below). Recombination is where stepping stones pay.
 
-**Analogy sweeps**, at kickoff and each checkpoint: for each seed field (plus any
-accrued), ask "what is this field's analogous mechanism for our problem?" and log
-every attempt one line — `field → mechanism considered → BITE / NO-BITE /
-DEFERRED` — failures included; the audit record is the point. Choosing a distant
-field is a DIRECTOR act, never an agent act: agents receive named fields. Keep
-sweeps and tranche wanders clear of restricted/safeguarded domains your model's
-safety layer will refuse — a blocked spend buys nothing and can stall an agent;
-log the slot `FENCED` and pick another field.
+## 5. Analogy sweeps — explicit, audited, and thought through
 
-## 5. One adversarial look — at the synthesis, at the end
+The four related-but-different disciplines from kickoff are not background
+reading — they are a standing obligation the run must discharge. At kickoff and at
+each synthesis checkpoint, for each seed field (plus any accrued mid-run), the
+director asks the question EXPLICITLY: **"what is this field's analogous mechanism
+for our problem?"** — and logs every attempt as one line:
+
+```
+field → mechanism considered → BITE / NO-BITE / DEFERRED
+```
+
+Failures included; the audit record is the point. The thinking is the required
+part — a field marked swept because an agent read three papers in it, with no
+logged attempt to map its mechanism onto the problem, is an unswept field. The
+one-line format is what makes the obligation checkable at close-out: the retro
+reads the sweep lines and reports which fields bit. In production, analogy hits
+were among the highest-value findings per unit spend — the mechanism your field
+is missing usually already exists somewhere, under a different name, and the
+sweep is how "already known, found and cited" wins actually happen.
+
+Mechanics: choosing a distant field is a DIRECTOR act, never an agent act —
+agents receive named fields, they do not pick new ones. Keep sweeps and tranche
+wanders clear of restricted/safeguarded domains your model's safety layer will
+refuse — a blocked spend buys nothing and can stall an agent; log the slot
+`FENCED` and pick another field.
+
+## 6. One adversarial look — at the synthesis, at the end
 
 The final synthesis gets ONE different-model adversarial pass: always for T1;
 for T2/T3 only when the synthesis will feed a registration, a design decision, or
@@ -143,7 +180,7 @@ unswept, what would a hostile reviewer say the map misses.* The ruling earns a
 check (PROTOCOL.md C3 discipline unchanged — verify it against the actual
 sources; a ruling is information, not an oracle).
 
-## 6. The retro — the protocol tunes itself
+## 7. The retro — the protocol tunes itself
 
 At close, a retro block answered from the log's own lines: where value actually
 came from (which tier, which round, exploit vs `[explore]`, which analogy fields
@@ -156,7 +193,7 @@ a first-exercising obligation: the first run that uses it must report on it
 explicitly, and a mechanism that sits unexercised across runs gets retired rather
 than accreting (that retirement rule has fired in production).
 
-## 7. Cross-run retention: the stepping-stones file
+## 8. Cross-run retention: the stepping-stones file
 
 One standing file (`research/STEPPING-STONES.md`) holds pruned-but-interesting
 tracks, NO-BITE analogies, and orphan fragments; every RECOMBINE step sweeps it.
