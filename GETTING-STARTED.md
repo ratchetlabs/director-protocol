@@ -13,7 +13,7 @@ Code; any harness with custom commands works — see ADAPTING.md).
 From your project root:
 
 ```sh
-git clone https://github.com/schraj/director-protocol.git docs/director-protocol
+git clone https://github.com/ratchetlabs/director-protocol.git docs/director-protocol
 # or: git submodule add <url> docs/director-protocol
 ```
 
