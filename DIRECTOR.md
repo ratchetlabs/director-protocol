@@ -16,6 +16,10 @@ in docs (PROTOCOL E3) — not activity.
 
 ## 2. Red-team every strategic decision
 
+*(The design-time form of this pass — where it carries the most leverage — is
+[DESIGN.md](DESIGN.md) §2; the exploration protocol that feeds those decisions is
+[RESEARCH.md](RESEARCH.md).)*
+
 Every strategic or architectural decision — including additions to a registration — gets a
 named red-team pass BEFORE it counts as "made." Voice the positions a real lab would
 raise, **steelmanned**, then give YOUR verdict as director:

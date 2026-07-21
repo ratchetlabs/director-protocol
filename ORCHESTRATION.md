@@ -157,7 +157,11 @@ enumerates: the claim class it may produce, venues, interface surfaces touched
 closure or exhaustion). Every arc opens with a plain-language **purpose summary**:
 what question this puts to the project goal, why now, what the project gains — a
 `goal_gain` row is mandatory, and "exercises the harness" does not qualify.
-`templates/ARC-SCOPE.md` is the form.
+`templates/ARC-SCOPE.md` is the form. Where arcs COME FROM is the design front end
+([DESIGN.md](DESIGN.md)): the question-first framing, the red-teamed approach choice,
+and the frozen design doc the arc's registrations cite all precede the signature —
+an arc request without that lineage is the "capability-first" drift the front end
+exists to catch. Exploration feeding the design runs under [RESEARCH.md](RESEARCH.md).
 
 **Inside an arc, cycles close through the mechanical gate** run by the non-party
 gatekeeper: re-hash every claimed artifact from its canonical path at committed HEAD;

@@ -97,6 +97,17 @@ One verdict-bearing experiment cycle ([PROTOCOL.md](PROTOCOL.md) §G):
    arbiter only for disputed / line-closing / favorable-AND-load-bearing verdicts.
 6. **ONE chain-log doc per experiment line** holds the whole record.
 
+**The cycle is the back half of a pipeline.** It certifies answers to well-posed
+questions — it cannot rescue a badly posed one. In the source project it worked
+because the same adversarial structure ran *upstream* of it: an exploratory-search
+protocol ([RESEARCH.md](RESEARCH.md)) that maps a space answer-first with cheap
+honest kills, and an adversarial design step ([DESIGN.md](DESIGN.md)) —
+unconstrained-best-first, named-voices red-team, question-first arcs, frozen
+design docs, a kickoff block before the first build action. Explore → design →
+register: each phase hands the next a committed artifact, and nothing crosses a
+boundary as a vibe. Without that front end, the registered cycle is rigor applied
+to the wrong object.
+
 ## Scaling it: seats, arcs, and the tier economy
 
 When one session stops being enough, [ORCHESTRATION.md](ORCHESTRATION.md) documents the

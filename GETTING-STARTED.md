@@ -67,6 +67,11 @@ and what its output means.
 
 ## 3. Start your first experiment line
 
+*(If you are starting from a blank problem rather than a ready experiment, the front
+end comes first: [RESEARCH.md](RESEARCH.md) to map the space, [DESIGN.md](DESIGN.md)
+to decide and freeze what to build. This section assumes that has happened — or that
+you already know your experiment.)*
+
 ```sh
 mkdir -p experiments/<line>/v1/{code,fixtures}
 cp docs/director-protocol/templates/BUILD-LOG.md      experiments/<line>/BUILD-<line>.md

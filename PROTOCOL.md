@@ -20,7 +20,11 @@
 ## §G. THE LEAN CYCLE (the default shape — read this first)
 
 Rules A–F below are the underlying laws. §G is how they compose into ONE default cycle
-shape for every verdict-bearing experiment. It exists because a full process audit of the
+shape for every verdict-bearing experiment. (§G is the BACK half of a pipeline: the
+question it certifies arrives from the adversarial front end — `RESEARCH.md` for the
+exploration that maps the space, `DESIGN.md` for the design step that decides what to
+build and freezes why. A cycle registered against an unchallenged design is rigor
+applied to the wrong object.) It exists because a full process audit of the
 source project (see `case-studies/04-lean-audit.md`) found that the layers that actually
 caught defects were **mechanical checks** (fixtures, planted nulls, static conformance) and
 **directed post-hoc adversarial review of surprising outcomes** — while redundant
