@@ -42,10 +42,17 @@ ones.**
    error control (`case-studies/02` and `03`). Hash-freeze every decision-bearing file and
    gate the scored run on a re-hash — automated, near-free, keep all of it.
 2. **Construction fixtures (the PREFERRED home for every new lesson):** planted-null /
-   vacuity checks (B5), extractor isolation, static fence/allowlist conformance,
-   output-schema assertions (per-item records AND magnitudes, not aggregates), exhaustive
-   verdict routing. A new failure mode becomes a **FIXTURE first**; a review step only if
-   no fixture can express it.
+   vacuity checks (the watched input stream must actually DIFFER across the conditions
+   it discriminates), **two-sided construction** (the manipulated world FAILS **and**
+   the matched counterfactual MEETS — one-sided checks pass for the wrong reason),
+   extractor isolation, static fence/allowlist conformance, output-schema assertions
+   (per-item records AND magnitudes, not aggregates), exhaustive verdict routing.
+   A new failure mode becomes a **FIXTURE first**; a review step only if no fixture can
+   express it. *(The former B3/B5 rules live HERE now — folded, not weakened.)*
+   **Mutation-battery floor:** any battery that edits source in a tight loop runs the
+   interpreter with bytecode caching disabled and caches cleared (same-second same-size
+   mutants can reuse stale bytecode), and every NEW fail-closed duty gets its mutation
+   arm at the moment it is written.
 3. **ONE independent adversarial check per registration — and ONE ROUND, period:** a
    different-model arbiter (C3) attacks the freeze candidate along directed attack lines
    (see `templates/C3-BRIEF.md`). The director then verifies the ruling against real code
@@ -217,10 +224,152 @@ missing from this repo at the gaps.
   **Net active rule mass trends DOWN while coverage holds; a growing rulebook is a
   finding.** The mature form is a rule-card register: each card is the binding rule;
   origin stories and worked examples live in an archive doc the cards point to.
+- **The register diet — this rule proved out at scale (2026-08-03, source project):**
+  one sitting cut the live register **−20.3%** in two moves. (1) **Law-only rewrite:**
+  provenance parentheticals, worked-instance retellings, and rationale essays deleted
+  in place under a deletion-only bar — version history is the archive; a card keeps
+  only its operative clauses. Measured surprise: provenance was ~18% of card mass,
+  not the estimated 60–70% — the rest was live law, so (2) further shrink came from
+  **retirement, not compression**: thirteen legacy rules retired in ONE human-ratified
+  batch. That batch is why this file's A5, B3, B5, B6, C1, C4, C6, D2, E, and the F
+  ladder are gone (numbering keeps its gaps — never renumber): B3/B5 folded into cycle
+  step 2's fixture list, B6 into §G.16, C6's red-team into `DESIGN.md`, D2 retired
+  outright (the honesty-control PATTERN survives as fixture practice), E folded per
+  its stub, F reduced to the seat rule. Two rules were promoted out of the legacy
+  sections into first-class cards instead of dying — retirement sweeps also surface
+  what deserves promotion.
 
 ---
 
-## A. Pre-commitment and freezes
+## §G++. Maturity amendments (source-state 2026-07-21 → 2026-08-03)
+
+The scaling period's amendments (§G+) were about verdict economy. This second wave is
+about **seat mechanics at sustained scale** — what a lab of parallel seats needs so
+that idle time, waits, context budgets, and cross-seat dependencies are governed by
+grammar rather than vigilance.
+
+### §G.29 No bare waits — a wait is EARNED, and every stop is labeled
+- A bare "waiting on X" is never a legal seat state. Before ANY wait, descend the
+  ladder: **tier 0** own signed work → **1** interface audit on surfaces you share →
+  **2** demand walk (a TOOL RUN over the lab's live state — see `tools/` pulse
+  pattern — every line naming your seat gets an explicit opened-and-disposed line)
+  → **3** cross-project clearinghouse sweep → **4** wayfinding/primer drafting →
+  **5** written closure: "ladder walked, tiers 1–4 one line each" + an ACTIONS TAKEN
+  line (or explicitly "actions: NONE").
+- **Every turn end is a held-unit check.** Ending a stroke while holding a unit whose
+  inputs are in hand IS a wait entry. The closing line states exactly ONE, verbatim
+  enum so tooling can parse it: `STOP-LABEL: CONTINUE | ARMED-WAIT |
+  CHECKPOINT-HOLDS-UNIT(<reason>) | HANDOFF(<queue>)`.
+- **Dead-man wake:** detection alone cannot actuate — a stalled lab is SILENT. A
+  `CHECKPOINT-HOLDS-UNIT` stop accepts only two reasons (checkpoint-now, or a NAMED
+  human gate), and the named-gate form ARMS a one-shot timer before stopping; on wake
+  the held-unit check re-runs. A held stop with neither wake nor exemption is a stall
+  by construction.
+- **Pre-wait push-assertion (research-line seats):** before any wait, assert (a)
+  nothing remains that could push the line — no arc to open, no note owed; (b) you
+  are NOT waiting on the human — where a human question existed, take your
+  recommended path, record it, raise it at the next checkpoint (a queue, never a
+  block).
+
+### §G.30 Model profile — discipline never scales with the model
+- A seat's laws bind identically on every model tier. Running a cheaper model, ADD
+  vigilance (self-caught errors are reported by name at checkpoint), never subtract
+  duties. Companion to the F stub and ORCHESTRATION.md §6.
+
+### §G.31 Seat instantiation is human-only
+- No seat launches, proposes launching, or builds launch machinery for another seat.
+  ONE narrow exception, held by the scheduler seat alone (ORCHESTRATION.md §1a).
+
+### §G.32 An indicting check earns a second, differently-built check
+- When a check INDICTS prior work, do not act on one instrument's word: build a
+  second check on a DIFFERENT mechanism before executing the indictment. Symmetric
+  honesty: the same skepticism you give favorable results, given to damning ones.
+
+### §G.33 / §G.42 Seal and coverage claims bind their whole surface
+- "sealed / clean / all-green" binds the WHOLE tracked surface, not the part you
+  looked at; any scan result carries what it did NOT sweep, declared by the
+  instrument itself. Silent truncation reads as "covered everything" — the class of
+  miss these two cards exist to kill.
+
+### §G.35 / §G.35a Rulings and commit subjects are evidence
+- Every arbiter ruling's raw output is a COMMITTED artifact under the arc it ruled.
+- A commit subject naming a stamp IS a stamp claim (subjects are read as state by
+  every later reader) — and subjects cap at **≤120 chars**: the stamp's text lives in
+  the chain log, never the subject line. Long subjects re-inflate every future
+  init read that walks the log.
+
+### §G.36 The hand-authored register (prime-directive lens)
+- Every hand-authored constant, menu, or per-case fact in machinery is a LABELED
+  example for a general mechanism, or it is a violation shape. Closed menus are the
+  named failure. This is the generalization test applied to your own apparatus.
+
+### §G.37 Fence claims are behavioral
+- A claimed fence ("tool X can't touch Y") is verified by BEHAVIOR — a probe that
+  tries — never by reading configuration. Config describes intent; the probe
+  measures the fence.
+
+### §G.39 Pinning append-managed docs
+- A hash pin on a doc that legitimately grows binds a LINE-PREFIX (first N lines +
+  their hash), never the whole file — otherwise every lawful append breaks the pin
+  and truth-decays into "expected failures."
+
+### §G.40 Tiered close gates + the self-serve checker
+- Gate requests carry tiers (blocking vs advisory); the checker RUNS before the gate
+  is requested — a gate opened on unchecked work spends the gatekeeper's attention
+  on what a script catches. Gate legs prove their own derivations before indicting
+  (§G.13h kin); "exit nonzero" and "no judgment formed" are DIFFERENT verdicts and
+  the report says which.
+
+### §G.43 "Unseen" is a fenced claim
+- Any transfer/hold-out claim names its fence: what the system could NOT have
+  observed, enforced by construction (leave-one-out drops, served-only construction)
+  — never "it wasn't in the store," which is a grain error.
+
+### §G.44 Staged contact — cheap probes first, certification is not progress
+- First fire of any new/amended surface: answer-side check at unit open · no maiden
+  flight on unspent material · probe-loop as the default iteration mode,
+  seat-autonomous (asking permission to run a cheap probe is itself the violation) ·
+  a delivery witness on anything handed across seats. Apparatus checks alone never
+  satisfy — at least one probe is answer-side/behavioral.
+
+### §G.45 / §G.46 Registration-time honesty for serving units
+- A unit registered to SERVE pairs its serving mode with a live witness at
+  registration, and its CHANNEL is registered too. Event-triggers gate SPEND, never
+  BUILD — build what you can verify now; spend (data, fresh material, external calls)
+  waits on the trigger.
+
+### §G.47 The reconciled answer
+- Before ANY recommendation/options answer leaves the seat: one step-back row — does
+  the answer actually reconcile with everything this seat already knows? The cheap
+  cure for locally-correct globally-wrong replies.
+
+### §G.48 Dependency asks are act-grade
+- Routing a cross-seat dependency is an ACT, not an fyi: it names what is owed, lands
+  in the owing seat's queue, and dual-routes to the scheduler when the owing seat is
+  a dispatched lane. Entering a dependency wait without the routed ask is a bare wait
+  (§G.29).
+
+### §G.49 / §G.50 Composition and power constants
+- At every registration boundary: REUSE-OR-FORK against the signed component
+  manifest — a `composes:` block naming what is reused; forks earn their existence.
+- A power constant ("bar met at N") is STAGE-SCOPED: cite it only at the stage whose
+  false-fail arithmetic produced it.
+
+### The init diet — context cost is a governed budget
+- The rule register is read as **INDEX + anchors + DELTA, never in full**: init reads
+  the one-line card index (a DOORBELL, never the door), 2–3 always-read cards in
+  full, and every card changed since the seat's recorded `register-read: <commit>`
+  pointer. Every other card is read IN FULL the moment its trigger fires.
+- Card extraction is a TOOL (`exact card bytes by section name`), not ad-hoc
+  text-slicing — overshoot reads double the cost silently.
+- Seat memory outside the repo obeys the same law as the rulebook: an INDEX of
+  one-line hooks, files pruned to standing human rulings + current-work context —
+  everything derivable from the repo or duplicating the charter is deleted, not
+  summarized. (Measured at the source project: memory 73→22 files, register −20.3%,
+  CORE handoff rows hard-capped — the floor that remains is the harness itself.)
+
+---
+
 
 ### A1. Pre-register before the first scored run
 - **TRIGGER:** any experiment that will produce a verdict.
@@ -270,12 +419,6 @@ missing from this repo at the gaps.
 *about* is an A2 pinned input (hash it into the freeze manifest), not an A4 block; A4
 governs never-before-observed draws feeding scored estimates. When a claim mixes both,
 the stochastic part draws fresh blocks and the fixed part gets pinned.
-
-### A5. Pre-commit downstream decisions to verdicts (make the pick mechanical)
-- **TRIGGER:** an experiment's outcome will drive a later design choice.
-- **RULE:** before the run, map **every possible verdict** to exactly one named
-  downstream option, so the pick is mechanical rather than post-run judgment.
-- **ARTIFACT:** a verdict→disposition table in the registration.
 
 ### A6. Construction-check firewall (the retune rule)
 - **TRIGGER:** a constant needs tuning during implementation.
@@ -328,50 +471,17 @@ the stochastic part draws fresh blocks and the fixed part gets pinned.
   exhaustive/boundary fixtures §<n>" so a reader sees the omission was reasoned, not
   forgotten.
 
-### B3. Two-sided checks — prove the effect AND the counterfactual
-- **TRIGGER:** a construction claims "X costs Y" or "X causes Y".
-- **RULE:** verify both sides: the manipulated condition FAILS (effect present) and the
-  matched counterfactual MEETS (effect absent when the cause is absent). One-sided checks
-  pass for the wrong reason. Corollary: write the one-line accounting identity for any
-  bound FIRST — algebra before prescription.
-
 ### B4. Dual reporting — a superseded bar must never look "met"
 - **TRIGGER:** a criterion is re-anchored or weakened after ratification.
 - **RULE:** every artifact forever reports the OLD anchor's (failing) result beside the
   new one. Report diagnostic readings beside binding ones as fragility flags; serialize
   non-routed reference statistics so the road not taken stays on the record.
 
-### B5. Vacuity check at shakedown
-- **TRIGGER:** before any scored run, for every arm / detector / control.
-- **RULE:** verify the arm's watched input stream actually DIFFERS across the conditions
-  it is meant to discriminate — traced to the channels the instrument **consumes**, not
-  the surface the arm manipulates. Byte-identical consumed streams = a vacuous test you
-  will only discover after burning the freeze (`case-studies/01`). Every statistical
-  instrument additionally gets a **planted-true-null probe** as a construction fixture:
-  feed it input that is null BY CONSTRUCTION; it must return zero detections.
-
-### B6. Evidence-channel rule — primary sources for verdict-bearing claims
-- **TRIGGER:** a claim a verdict rests on, or ANY absence claim ("the source never says
-  X"), sourced from an extraction / summary pass.
-- **RULE:** verify against the primary source directly and record the evidence channel.
-  Paraphrase chains are fine for orientation, never for verdicts.
-
----
-
 ## C. Anti-single-model bias
 
 **The standing fact:** every fresh-context subagent you spawn is the same base model as
 you. Fresh context removes conversational contamination, **not shared priors**. Same-model
 agreement is weak evidence; structure must supply the independence the model can't.
-
-### C1. Blind review by redaction
-- **TRIGGER:** comparing designs/rivals, or scoring anything where knowing the author's
-  hypothesis would contaminate the judge.
-- **RULE:** judges are fresh-context agents given a neutral scenario suite + a scrubbed
-  packet (author predictions and "our build" comparisons redacted; halo-bearing claims
-  rewritten to plain design claims). Fixed canonical order for every judge. Silence scores
-  UNSPECIFIED — inventing mechanisms on the author's behalf is the judge's named failure
-  mode. Author predictions re-enter only at synthesis, as a separate column.
 
 ### C2. Adversarial second pass on every favorable verdict
 - **TRIGGER:** any judge/reviewer pass produced verdicts (especially favorable ones) that
@@ -402,35 +512,12 @@ agreement is weak evidence; structure must supply the independence the model can
   the miss (in `case-studies/02`, the defective bar was the arbiter's own correction).
   Cross-model *disagreement* is the signal worth most — do not explain it away.
 
-### C4. Forcing checks — independent re-derivation, function-matched
-- **TRIGGER:** you believe a design is "forced by the demands" (vs. merely the path you
-  happened to take).
-- **RULE:** give several fresh agents ONLY the goal + scenarios (all project vocabulary
-  scrubbed — keep a scrub log), vary framing but never content, and have SEPARATE blind
-  judges score each design against a functional-match table (match by function, not
-  vocabulary). Gate on a pre-declared threshold. Same-model newcomers are correlated
-  draws — the result carries a same-model scope qualifier until a different family
-  replicates it.
-
 ### C5. Same-model caveat + dormant replication debt with named tripwires
 - **TRIGGER:** any same-model convergence result gets used or upgraded.
 - **RULE:** record the caveat in the doc itself. The different-model replication debt is
   DORMANT, not owed — until a named tripwire fires (external citation; using the claim to
   decline a rival design; publication-grade language; a build commitment). List the
   tripwires next to the claim. A same-lineage rerun does NOT discharge the debt.
-
-### C6. Red-team pass on every significant decision
-- **TRIGGER:** any strategic/architectural decision, including additions to a
-  registration.
-- **RULE:** voice the named positions (the skeptic, the rival approach, the won't-scale
-  worry, the wrong-problem worry, the RIGGING worry — in both directions: could this fix
-  hand us a positive? a negative?), steelman each, then give a director verdict with an
-  explicit disposition ("ACCEPTED with [named guards] binding"). Mark it "Red-team:" in
-  the doc so the decision visibly survived a challenge. Kill-first for new abstractions:
-  steelman every reduction to something already present; a candidate earns a seat only by
-  forcing a demand nothing existing produces. See DIRECTOR.md.
-
----
 
 ## D. Second-look passes (error catching)
 
@@ -439,13 +526,6 @@ agreement is weak evidence; structure must supply the independence the model can
 - **RULE:** enumerate EVERY citation site (docs, status lines, memory), confirm each
   carries the required scope qualifier, and state explicitly what does and does not
   structurally rest on the claim.
-
-### D2. Re-run settled verdicts as honesty controls
-- **TRIGGER:** the environment changes under an experiment whose earlier verdicts are
-  treated as settled.
-- **RULE:** re-run the settled arms as controls in the new environment. If a control
-  fires, HALT and retune (logged as a deviation) — the change reopened what you thought
-  was closed.
 
 ### D3. The lessons ratchet
 - **TRIGGER:** ANY correction — by the user, by an adjudicator, or by your own second
@@ -456,6 +536,12 @@ agreement is weak evidence; structure must supply the independence the model can
   also add it to THIS document. Then apply ratchet hygiene (§G): a new failure mode
   becomes a FIXTURE first, and adding a lesson should retire whatever review step it makes
   redundant.
+- **At scale, SHARD:** one router file + a per-seat shard (`lessons/<seat>.md`). Each
+  shard opens with a DISTILLED section — one RULE line per entry, the only part read
+  at init; the full entry is opened the moment its family fires (same doorbell law as
+  the card index). A correction writes the full entry + its distilled line in the
+  same commit, and the seat's layer records `lessons-read: <commit>` so successors
+  read only what's new.
 
 ### D4. Second look before "done" — the forced-fresh-look protocol
 - **TRIGGER:** about to mark verdict-bearing work complete, or about to assert a result.
@@ -493,53 +579,20 @@ agreement is weak evidence; structure must supply the independence the model can
 
 ---
 
-## E. Documentation-as-state
+## E. (retired at maturity — folded)
 
-### E1. Docs are the state
-- **TRIGGER:** always.
-- **RULE:** the design docs ARE the project state. Fix stale documentation (broken
-  pointers, completed "next steps", outdated status lines) on sight. Keep spec status
-  lines current when work lands.
+Documentation-as-state earned graduation into the working laws themselves: docs-are-
+the-state and checkpoint discipline live in §G cycle step 6 and ORCHESTRATION.md §2;
+decisions-land-in-docs is §G.16's bytes-before-statements applied to decisions. The
+E-section ceremony rows added nothing the folds don't.
 
-### E2. Checkpoint discipline
-- **TRIGGER:** the user asks for a checkpoint, or a session ends after substantive work.
-- **RULE:** run the checkpoint routine (`claude/commands/save.md`): reconcile specs,
-  overwrite the living handoff doc (`templates/HANDOFF.md`), refresh project memory,
-  print a restart briefing.
+## F. Seat rule (the stub that survived)
 
-### E3. Decisions land in docs, not in chat
-- **TRIGGER:** a decision is made mid-session (ratification, verdict, pick).
-- **RULE:** it isn't made until it's written into the governing doc. Under §G the chain
-  log IS that doc — one write at decision time, mirrors at checkpoint only.
-
----
-
-## F. Model economy — what to escalate
-
-The director model executes everything above; the rules are designed so discipline comes
-from structure, not from the model's spontaneous judgment. Reserve **escalation** (a
-stronger session, or a different-model arbiter) for the few places where judgment itself
-is the product:
-
-1. **Pass-criterion adjudication** (C3) — mandatory different-model.
-2. **The one registration check** (§G.3) — the arbiter's directed attack on the draft.
-3. **Different-model replication when a C5 tripwire fires.**
-4. **Phase-boundary design reviews** — before committing to a build phase, not during.
-5. **Line-closing / impossibility conclusions** (C3) — a different-model attempt to
-   REFUTE the conclusion BEFORE acting on it; escalate the *judgment*, keep the *labor*
-   (verifying the arbiter's answer) on the default model.
-6. NOT for: routine implementation, doc sync, running pre-registered experiments,
-   first-pass reviews. The line is judgment-vs-labor: escalate where being wrong is
-   expensive and same-model priors might capture you; never escalate something you can
-   just check yourself.
-
-Delegate all delegable **execution** (builds, harvests, drafting, paper reading) to
-cheaper executor agents; the director writes the brief and verifies the product. When
-escalating, prepare an **exhibits package**: the question, the frozen text, the evidence,
-the proposed change — so the expensive call spends tokens judging, not reconstructing
-context.
-
----
+The escalation ladder is retired — arbiter economy lives in §G.9 and the tier economy
+in ORCHESTRATION.md §6. What survives is one invariant: **model identity never scales
+discipline.** A seat holds its FULL duties whatever model runs it — red-team passes,
+forced fresh looks, push-back. A cheaper model changes the error rate you watch for,
+never the laws that bind the seat (§G++ model profile).
 
 ## Session-start check (10 seconds)
 

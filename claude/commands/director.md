@@ -15,13 +15,19 @@ the state of record; step 4a is the recovery move.
 file `tasks/handoff/<seat>.md`: seat state, first actions (binding and ordered),
 fences. Then **drain your inbox** (`tasks/inbox/<seat>/`): for each note, verify the
 named commit resolves at HEAD (a note whose hash doesn't resolve is not-yet-sent),
-act or file, then DELETE the note (delete = ack). If this sitting expects a RESPONSE
-from another seat, arm an event-EMITTING monitor on the inbox — silent when empty;
-a log-only polling loop is deaf by construction.
+act or file, then DELETE the note (delete = ack). Then arm the inbox monitor —
+**always, whole session, not just when expecting a response**: event-EMITTING, silent
+when empty (a log-only polling loop is deaf by construction), with a SELF-PROOF at
+arm time (plant a probe file, see the emission, remove it — exactly one
+"ARMED + self-proof PASS" event).
 
-**2. Read `PROTOCOL.md` §G (the lean cycle) + §G+ (the amendments)** — the governing
-shape for all verdict-bearing work — plus any sections the handoff names. Do not rely
-on memory of the rules; they ratchet between sessions.
+**2. Read the register as INDEX + anchors + DELTA, never in full:** the one-line card
+index, the 2–3 always-read cards (the lean cycle §G head; the wait-ladder card), and
+every card changed since your layer's recorded `register-read: <commit>` pointer.
+Every OTHER card is read IN FULL the moment its trigger fires — the index line is a
+doorbell, never the door. Extract cards with a tool that returns exact card bytes by
+name, not ad-hoc text slicing. Same law for lessons: the DISTILLED lines + entries
+newer than your `lessons-read:` pointer.
 
 **3. Read the LITERAL tail of each chain log you will act on** (`BUILD-<line>.md`) —
 the last countersign, verdict, or open gate is the true state of that line and
@@ -57,3 +63,9 @@ cheaper agents, use the different-model arbiter for the one registration check a
 genuine escalations (ONE round, ever), verify every ruling and builder report against
 real code/data before accepting it, commit own-scoped paths at every event boundary,
 and bring the user only the signature gates and genuine scope decisions.
+
+**7. Every turn end is a held-unit check** (PROTOCOL.md §G.29 / CHECKLISTS.md §13):
+ending a stroke while holding a unit whose inputs are in hand IS a wait entry. Close
+every working stroke with exactly one verbatim label — `STOP-LABEL: CONTINUE |
+ARMED-WAIT | CHECKPOINT-HOLDS-UNIT(<reason>) | HANDOFF(<queue>)` — and walk the
+ladder before any ARMED-WAIT.

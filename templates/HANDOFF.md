@@ -7,6 +7,14 @@
 > lines are awareness, not truth: **the chain log always wins**; a seat about to act on
 > a line reads its literal tail. Add a "RISKS TO PROJECT" section to every layer file —
 > "NONE identified" is legal but must be written (PROTOCOL.md §G.27).
+>
+> **Ceilings + rolls (init-cost law, ORCHESTRATION.md §9):** seat rows carry a HARD
+> character ceiling (ours: 350 live, 200 retired-stub) — state · blocked-or-not ·
+> next event · layer pointer, detail ONLY in the layer file. Each seat trims its OWN
+> row. Prose strata roll to an archive file as VERBATIM MOVES with dated roll headers
+> — move-or-delete, never re-characterize. Writes to the shared CORE go under an
+> advisory lock, assembled in memory and written once; read the staged diff before
+> committing so a peer's concurrent edit is unstaged, never swept.
 
 **Date:** <date> (<who is directing / executing / arbitrating>).
 **Headline: <one sentence — the biggest thing that changed and where the project now

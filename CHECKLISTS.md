@@ -364,3 +364,50 @@ When drafting an arc for the human's signature (`templates/ARC-SCOPE.md`):
 **DO NOT PROCEED UNTIL** the purpose summary exists, every scope-table row is
 enumerated (no "TBD" cells), and the goal-gain row states information the project
 acquires — not activity.
+
+## 13. WAIT ENTRY / TURN END (every seat, every stop — PROTOCOL.md §G.29)
+
+Before entering ANY wait, or ending a turn while holding a unit whose inputs are in
+hand:
+
+- [ ] Tier 0 — own signed work remaining? Do it instead.
+- [ ] Tier 1 — interface audit owed on any surface you share?
+- [ ] Tier 2 — demand walk RUN AS A TOOL (lab pulse over committed state); every line
+      naming your seat gets an explicit opened-and-disposed line. Pulse output CITED
+      in the closure — a walk with neither citation nor a disclosed tool-failure
+      fallback is non-compliant.
+- [ ] Tier 3 — cross-project clearinghouse swept?
+- [ ] Tier 4 — wayfinding/primer debt you could pay?
+- [ ] Tier 5 — written closure: "ladder walked, tiers 1–4: one line each" + ACTIONS
+      TAKEN line (routes with note+hash, drafts, alarms — or explicitly "actions:
+      NONE").
+- [ ] Closing line carries exactly ONE verbatim label:
+      `STOP-LABEL: CONTINUE | ARMED-WAIT | CHECKPOINT-HOLDS-UNIT(<reason>) |
+      HANDOFF(<queue>)`.
+- [ ] `CHECKPOINT-HOLDS-UNIT` reason is checkpoint-now or a NAMED human gate — and
+      the named-gate form ARMS the one-shot dead-man wake before stopping.
+- [ ] Research-line seats: push-assertion — (a) nothing remains that could push the
+      line; (b) NOT waiting on the human (take your recommended path, record it,
+      raise at next checkpoint).
+- [ ] The wait is DECLARED to the waited-on seat (a note in their inbox), and the
+      inbox monitor's ARMED + self-proof emission has fired.
+
+## 14. TIERED CLOSE GATE (requesting or receiving — PROTOCOL.md §G.40)
+
+Requester, before the gate opens:
+
+- [ ] The self-serve checker RAN and its report is committed under the arc — a gate
+      opened on unchecked work spends the gatekeeper on what a script catches.
+- [ ] Tier declared: blocking vs advisory.
+- [ ] The request opens with its PURPOSE and names the exact artifacts (paths +
+      hashes), not "the usual".
+
+Gatekeeper, before any verdict:
+
+- [ ] Every red leg PROVES ITS OWN DERIVATION before indicting (a failing gate leg is
+      a claim like any other).
+- [ ] "Checker exited nonzero" vs "no judgment formed" are reported as DIFFERENT
+      states, never merged.
+- [ ] The verdict names what was NOT swept (coverage is a claim).
+- [ ] An indicting verdict earns a second, differently-built check before anyone acts
+      on it (§G.32).

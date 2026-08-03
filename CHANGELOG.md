@@ -2,6 +2,51 @@
 
 All notable changes to this protocol are documented here.
 
+## 0.4.0 — the register diet + seat mechanics at sustained scale (source-state 2026-08-03)
+
+- **The removals (mirroring the source project's one-sitting register diet, −20.3%
+  measured):** A5, B3, B5, B6, C1, C4, C6, D2 deleted (B3/B5 folded into cycle step
+  2's fixture list — two-sided construction + vacuity now live there; B6 into §G.16;
+  C6's red-team into DESIGN.md; D2 retired outright, its honesty-control pattern
+  surviving as fixture practice); the E section folded into §G step 6 / §G.16 /
+  ORCHESTRATION §2; the F escalation ladder reduced to the seat-rule stub. Numbering
+  keeps its gaps — never renumber. §G.23 now records the diet's measured finding:
+  provenance was ~18% of card mass, not the estimated 60–70%, so shrink past the
+  law-only rewrite means RETIREMENT, not compression.
+- **PROTOCOL §G++ (new):** the second amendment wave — no-bare-wait ladder with the
+  parseable STOP-LABEL enum + dead-man wake (§G.29), model-profile invariant (§G.30),
+  human-only seat instantiation (§G.31), second-check-before-indictment (§G.32),
+  whole-surface seal/coverage claims (§G.33/42), committed ruling raws + ≤120-char
+  commit subjects (§G.35/35a), hand-authored-register lens (§G.36), behavioral fence
+  claims (§G.37), line-prefix pins (§G.39), tiered gates + self-serve checker
+  (§G.40), fenced "unseen" claims (§G.43), staged contact / probe-first (§G.44),
+  serving-mode + spend-vs-build triggers (§G.45/46), reconciled answer (§G.47),
+  act-grade dependency asks (§G.48), reuse-or-fork composition (§G.49), stage-scoped
+  power constants (§G.50), and the init diet (index + anchors + delta reads).
+- **ORCHESTRATION §1a (new):** the dispatch law — seat instantiation is human-only
+  with ONE carved exception: the scheduler/architect seat dispatches the two
+  mechanized execution lanes (machine executor, supply) on mechanically-defined
+  demand; the scheduler of record waits only behind a clean cited lab-pulse run;
+  idle-with-demand is a scheduler defect by definition. §8's "dispatcher unproven"
+  bullet corrected accordingly — this narrow form has now run.
+- **ORCHESTRATION §6:** the roster that stuck — frontier tier for research-judgment
+  director seats; the scribe/gatekeeper seat and both dispatched lanes mid-tier
+  (Opus-class) permanently. Tier follows work shape, never seniority.
+- **ORCHESTRATION §3:** the demand walk is a TOOL RUN (lab-pulse), monitors arm with
+  a planted-probe self-proof, and every turn end is a labeled held-unit check.
+- **ORCHESTRATION §9 (new):** the context budget — CORE row ceilings + layer files +
+  verbatim archive rolls, index+delta register reads, ≤120 commit subjects, memory
+  pruned to standing rulings + current work (source measurements: register −20.3%,
+  memory 73→22 files), and measure-your-floor honesty.
+- **CHECKLISTS §13/§14 (new):** wait entry / turn end; tiered close gate (both
+  sides).
+- **PROTOCOL D3 + templates/lessons.md:** lessons shard at scale (router + per-seat
+  DISTILLED sections, delta-read pointers).
+- **templates/HANDOFF.md:** row ceilings, verbatim rolls, lock + staged-diff
+  discipline for shared-CORE writes.
+- **claude/commands/director.md:** init steps sync — always-armed self-proving
+  monitor, index+anchors+delta register read, turn-end STOP-LABEL step.
+
 ## 0.3.0 — the front end + the four-functions framing
 
 - **README "What it actually does"**: the mechanism layer named — memory outside the
