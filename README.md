@@ -1,14 +1,20 @@
 # Director Protocol
 
-A working discipline for LLM-directed empirical and research work — any project where an
-LLM session produces **claims that must survive adversarial scrutiny**: experiment
-verdicts, pass/fail results, design decisions other sessions will trust.
+A written process for running research with LLM agents across many sessions, so that
+the results they report can be trusted. It covers how a session commits to a test
+before running it, which checks run in code, who reviews what, and how several
+sessions work in parallel through a git repository.
 
-It was extracted from a working research project at [Ratchet Labs](https://ratchetlabs.ai)
-that ran this discipline for weeks across a hundred-plus registered experiment arcs — first as a single director
-session, then as a fleet of parallel director seats — and audited itself along the way
-to find out **which process layers actually caught defects**. Two findings shaped
-everything here:
+It is for people who run agents on experiments, or on any work where a wrong "it
+passed" is costly. It is documents, templates and one small script. There is no
+framework to install.
+
+It came out of my own research project, published under the name
+[Ratchet Labs](https://ratchetlabs.ai). Agent sessions ran the experiments there for
+several weeks in summer 2026, across a hundred-plus registered experiment arcs: first
+as a single director session, then as several director sessions in parallel ("seats").
+Along the way the project audited itself to find out **which process layers actually
+caught defects**. Two findings shaped everything here:
 
 > **1. Defects are caught by MECHANICAL checks — fixtures, planted nulls, static
 > conformance checks, pre-computed arithmetic — and by DIRECTED adversarial review of
@@ -24,6 +30,25 @@ everything here:
 > seats ran on a mid-tier model with supervision collapsing to spot-checks. On day one
 > of that transition, a cheap-model seat caught and corrected a strong-model seat's
 > committed error ([case study 05](case-studies/05-tier-transition.md)).
+
+## Status and limits
+
+- **Paused.** The last update was August 2026. The research project this came from is
+  on hold, and I have stepped back from the protocol for now.
+- **Not yet tried outside its source project.** Everything here was learned on one
+  project. Whether it transfers is the open question.
+- **It is expensive.** It ran mostly on the most capable model available and takes a
+  lot of tokens, so it may not be a general-use framework. I think some of the ideas
+  transfer.
+- **Two problems I did not solve.** I found no way to get rules that an agent follows
+  100% of the time; black-and-white instructions were sometimes not followed. And the
+  director agents' attitude varied over time, in proactivity and ownership, and with
+  it their effectiveness as autonomous researchers.
+- **Who did what.** The agents built most of the mechanical checks, and the case
+  studies are told from their records. My hands-on work was the process around them.
+
+If you try any of it on your own work, please open an issue and say what happened,
+including where it did not fit.
 
 ## What it actually does
 
@@ -111,7 +136,7 @@ to the wrong object.
 ## Scaling it: seats, arcs, and the tier economy
 
 When one session stops being enough, [ORCHESTRATION.md](ORCHESTRATION.md) documents the
-multi-seat structure that ran in production: persistent **seats** occupied by
+multi-seat structure that ran in the source project: persistent **seats** occupied by
 successive sessions (fences bound writes, not thought) · coordination through
 **committed facts** (commit-first inbox notes, delete-is-ack, event-emitting monitors) ·
 four governance roles that earned their keep (registrar, non-party gatekeeper, auditor,
